@@ -1,6 +1,6 @@
 # Assignment: NBA Search
 
-Create a simple but fully functional application that allows users to search for an NBA MVP player by year or by name.
+Create a simple but fully functional application that allows users to search for an NBA MVP player by year or by name. This assignment requires both client and server code.
 
 ## HTML and CSS Requirements
 * fully responsive beginning at 360px
@@ -14,7 +14,7 @@ Create a simple but fully functional application that allows users to search for
 * graceful error handling if the user attempts to search for a year or name that is not in the data
 
 ## Node Requirements
-* a server built with Express
+* a server built with Express that runs at port 8080
 * an endpoint to respond to a request by name
 * an endpoint to respond to a request by year
 
