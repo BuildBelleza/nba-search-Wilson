@@ -1,6 +1,3 @@
-# nba-search
-
-
 # Assignment: NBA Search
 
 Create a simple but fully functional application that allows users to search for an NBA MVP player by year or by name.
