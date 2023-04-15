@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+input {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    row-gap: 10px;
+    background-color: orange;
+}
+
+body {
+    background-color: blue;
+    color: white;
+}
