@@ -17,21 +17,35 @@ function renderInput() {
   _input.addEventListener('keyup', handleKeyup);
   inputContainer.append(_input);
 }
+// const input = document.getElementById("input");
+
+
+
+const results = document.getElementById("results");
+
+const search = document.getElementById("search-button");
+
+renderBtn(search);
+
+search.addEventListener("click", function() {
+
+console.log(input.value);
+
+});
 
 function renderBtn() {
   const btn = document.createElement('button');
   btn.addEventListener('click', handleClick);
   btn.innerText = 'Click Me';
-  app.append(btn);
+  // app.append(btn);
 }
 
 function renderInputContainer() {
   const div = document.createElement('div');
   div.className = 'input-container';
-  inputContainer = div;
-    app.append(div);
-  renderInput();  
-  
+  inputContainer = div
+  // app.append(div);
+  renderInput(inputContainer);
 };
 
 
@@ -41,7 +55,7 @@ function renderFeedbackContainer() {
   const div = document.createElement('div');
   div.className = 'feedback-container';
   feedbackContainer = div;
-  app.append(div);
+  // app.append(div);
 }
 
 function loadHTMLElements() {
@@ -93,12 +107,12 @@ function handleKeyup(e) {
 
 function renderFeedback(str) {
   feedbackContainer.innerHTML = '';
-  search.value = '';
+  input.value = '';
   const div = document.createElement('div');
   div.id = 'feedback';
   div.innerText = str;
   div.className = 'feedback';
-  app.appendChild(div);
+  // app.appendChild(div);
 }
 
 
@@ -106,20 +120,25 @@ function renderFeedback(str) {
 
 
 async function getData() {
-    const response = await fetch('http://127.0.0.1:8080/mvp');
-    const data = await response.json();
+    const response = await fetch('/api/mvp.json');
+    
     
   
-      console.log(data);
+      console.log(response);
+      return response.json();
 };
+
+
 
 getData();
 // let input = document.getElementById("input").value;
 
-// const finalValue = document.getElementById("results");
+//I need my search button to search the json file for the input provided by the user and return the results to the results div.
 
-// let search = document.getElementById("search-button");
+const finalValue = document.getElementById("results");
+
+
 
 JSON.stringify() === JSON.stringify();
 
-let filteredData = obj.filter(item => item.player.toLowerCase().includes(input.toLowerCase()));
+// let filteredData = JSON.obj.filter(item => item.player.toLowerCase().includes(_input.toLowerCase()));
