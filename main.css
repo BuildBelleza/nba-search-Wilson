@@ -24,3 +24,7 @@ body {
     background-color: blue;
     color: white;
 }
+
+#finalValueData {
+    text-align: center;
+}
