@@ -1,4 +1,4 @@
-
+// import { getData } from './main.js';
 
 
 const app = document.getElementById('app');
@@ -16,29 +16,44 @@ function renderInput() {
   _input.id = 'input';
   _input.addEventListener('keyup', handleKeyup);
   inputContainer.append(_input);
-}
+};
 // const input = document.getElementById("input");
 
 
 
 const results = document.getElementById("results");
 
-const search = document.getElementById("search-button");
+const search = (document.getElementById("search-button")
 
-renderBtn(search);
+// (inputEntered("click", ) = (search.addEventListener(click, function() {
+//   console.log("search button clicked");
+// }) = function() {
+//   const input = document.getElementById("input").value;
+//   console.log(input);
+//   return input;
+// }))
 
-search.addEventListener("click", function() {
 
-console.log(input.value);
 
-});
 
-function renderBtn() {
-  const btn = document.createElement('button');
-  btn.addEventListener('click', handleClick);
-  btn.innerText = 'Click Me';
-  // app.append(btn);
-}
+
+
+
+
+// renderBtn();
+
+// search.addEventListener("click", function() {
+
+// console.log(input.value);
+
+// });
+
+// function renderBtn() {
+//   const btn = document.createElement('button');
+//   btn.addEventListener('click', handleClick);
+//   btn.innerText = 'Click Me';
+//   app.append(btn);
+// };
 
 function renderInputContainer() {
   const div = document.createElement('div');
@@ -56,7 +71,7 @@ function renderFeedbackContainer() {
   div.className = 'feedback-container';
   feedbackContainer = div;
   // app.append(div);
-}
+};
 
 function loadHTMLElements() {
   renderInputContainer();
@@ -142,3 +157,7 @@ const finalValue = document.getElementById("results");
 JSON.stringify() === JSON.stringify();
 
 // let filteredData = JSON.obj.filter(item => item.player.toLowerCase().includes(_input.toLowerCase()));
+
+let filteredData = JSON.obj.filter(item => item.player.toLowerCase().includes(_input.toLowerCase()));
+
+let filteredData = JSON.obj.filter(item => item.year.toLowerCase().includes(_input.toLowerCase()));

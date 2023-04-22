@@ -6,25 +6,25 @@ const port = 8080;
 
 const mvp = require('./mvp.json');
 
-// const http = require('http');
-// const fs = require('fs');
+const http = require('http');
+const fs = require('fs');
  
 
 server.use(express.json());
 server.use(express.urlencoded({extended: false}));
 server.use(express.static('public'));
 
-// fs.readFile('index.html', (err, html) => {
-//         if(err){
-//             throw err;
-//         }
-//         const serverRender = http.createServer((req, res) => {
-//             res.statusCode = 200;
-//             res.setHeader('Content-type', 'test/html');
-//             res.write(html);
-//             res.end('');
-//     });
-// serverRender();
+fs.readFile('index.html', (err, html) => {
+        if(err){
+            throw err;
+        }
+        const serverRender = http.createServer((req, res) => {
+            res.statusCode = 200;
+            res.setHeader('Content-type', 'test/html');
+            res.write(html);
+            res.end('');
+    });
+serverRender();
 
     server.get("/api/mvp/:year", (req, res) => {
         res.send(`mvps ${req.params.year}`)
@@ -40,4 +40,4 @@ server.use(express.static('public'));
     
 server.listen(port,() => {
     console.log('Server started on port '+port);    
-}); 
+}); });
