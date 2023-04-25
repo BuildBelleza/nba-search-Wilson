@@ -6,8 +6,7 @@ h3 {
     text-align: center;
 }
 
-input {
-    display: block;
+#input {
     margin: 0 auto;
     text-align: center;
 }
@@ -23,8 +22,14 @@ button {
 body {
     background-color: blue;
     color: white;
-}
-
-#finalValueData {
     text-align: center;
 }
+
+#label {
+    text-align: center;
+}
+
+#results {
+    text-align: center;
+}
+

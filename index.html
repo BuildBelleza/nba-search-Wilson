@@ -4,24 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
+    <script src="sub.js"></script>
     <!-- <script src="/api/server.js"></script> -->
     <link rel="stylesheet" href="main.css">
     <title>MVP Search</title>
 </head>
 <body>
    <h1><span style = "color:rgb(255, 165, 0, 100%)";>MVP Search</span></h1> 
-   <h3>Enter a player name or year in the field below to search.</h3>
-   <div>
-    <input type="" id="search" placeholder="Player Name or Year">
-    <br>
-    <button id="search-button">Search</button>
-    </div>
-    <br>
-    <div id="results"></div>
-    <br>
-    <div id="results2"></div>
-    <br>
+   
+   <form onsubmit="search(event)">
+<label for="input">Enter a player name or year in the field below to search.</label><br><br>
+<input type="text" id="input" name="input"><br><br>
+<button type="submit">Search</button>
+</form>
+   <div id="results"></div>
 
      
 </body>
